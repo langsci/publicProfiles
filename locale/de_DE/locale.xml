@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/publicProfiles/locale/de_DE/locale.xml
+  *
+  * Copyright (c) 2016 Language Science Press
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for this plugin.
+  *
+  -->
+
+<locale name="de_DE" full_name="German">
+
+	<message key="plugins.generic.publicProfiles.displayName">Public Profiles Plugin</message>
+	<message key="plugins.generic.publicProfiles.description">Fügt für alle registrierten Benutzer eine öffentliche Profilseite hinzu.</message>
+	<message key="plugins.generic.publicProfiles.title">Öffentliches Profil</message>
+	<message key="plugins.generic.publicProfiles.settings">Einstellungen</message>
+	<message key="plugins.generic.publicProfiles.settings.title">Einstellungen des Public Profiles Plugins</message>
+	<message key="plugins.generic.publicProfiles.settings.pathIntro">Pfad zum öffentlichen Profil:</message>
+	<message key="plugins.generic.publicProfiles.settings.path">(z.B. führt die Eingabe von "user/publicProfile" zum Pfad %verlagspfad%/user/publicProfile/%user_id%)</message>
+	<message key="plugins.generic.publicProfiles.settings.userGroupsIntro">Welche Benutzergruppen sollen im öffentlichen Profil aufgenommen werden? Bitte durch Kommata trennen.</message>
+	<message key="plugins.generic.publicProfiles.settings.userGroups">(z.B. Setzer, Autor, Korrekturleser)</message>
+	<message key="plugins.generic.publicProfiles.settings.onlyPublishedMonographs">Es werden nur veröffentlichte Bücher aufgenommen</message>
+	<message key="plugins.generic.publicProfiles.settings.unifiedStyleSheetForLinguistics">Unified Style Sheet für die Linguistik wird benutzt</message>
+	<message key="plugins.generic.publicProfiles.noProfileAvailable">Für diese Person gibt es kein öffentliches Profil.</message>
+	<message key="plugins.generic.publicProfiles.header">Öffentliches Profile von</message>
+	<message key="plugins.generic.publicProfiles.affiliation">Institution: </message>
+	<message key="plugins.generic.publicProfiles.website">Webseite: </message>
+	<message key="plugins.generic.publicProfiles.biostate">Biografie: </message>
+	<message key="plugins.generic.publicProfiles.email">Email: </message>
+
+</locale>
