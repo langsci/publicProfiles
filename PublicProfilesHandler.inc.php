@@ -119,7 +119,10 @@ class PublicProfilesHandler extends Handler {
 		}
 		
 		// get profile image that was uploaded in the OMP public profile
-		$templateMgr->assign('profileImage',$request->getUser()->getSetting('profileImage'));
+		
+		$userSetting = $publicProfilesDAO->getSettingsByAssoc($userId,ASSOC_TYPE_PRESS);	
+		$templateMgr->assign('profileImage',$userSetting['profileImage']);
+			
 		$publicFileManager = new PublicFileManager();
 		$templateMgr->assign('publicSiteFilesPath',$publicFileManager->getSiteFilesPath());
 

@@ -203,6 +203,30 @@ class PublicProfilesDAO extends DAO {
 		}	
 
 	}
+	
+	function &getSettingsByAssoc($userId, $assocType, $assocId = null) {
+		$userSettings = array();
+
+		$result = $this->retrieve(
+			'SELECT	setting_name,
+				setting_value,
+				setting_type
+			FROM	user_settings
+			WHERE	user_id = ? AND
+				assoc_type = ?
+				AND assoc_id = ?',
+			array((int) $userId, (int) $assocType, (int) $assocId)
+		);
+
+		while (!$result->EOF) {
+			$row = $result->getRowAssoc(false);
+			$value = $this->convertFromDB($row['setting_value'], $row['setting_type']);
+			$userSettings[$row['setting_name']] = $value;
+			$result->MoveNext();
+		}
+		$result->Close();
+		return $userSettings;
+	}	
 
 }
 
