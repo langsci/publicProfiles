@@ -14,3 +14,11 @@
 
 
 
+
+#publicProfiles span.header {
+    font-weight: bold;
+}
+
+#publicProfiles li {
+    padding-bottom: 8px;
+}
