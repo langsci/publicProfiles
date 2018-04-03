@@ -121,7 +121,7 @@ class PublicProfilesHandler extends Handler {
 		// get profile image that was uploaded in the OMP public profile
 		
 		$userSetting = $publicProfilesDAO->getSettingsByAssoc($userId,ASSOC_TYPE_PRESS);	
-		$templateMgr->assign('profileImage',$userSetting['profileImage']);
+		//$templateMgr->assign('profileImage',$userSetting['profileImage']);
 			
 		$publicFileManager = new PublicFileManager();
 		$templateMgr->assign('publicSiteFilesPath',$publicFileManager->getSiteFilesPath());
@@ -139,7 +139,7 @@ class PublicProfilesHandler extends Handler {
 			$templateMgr->assign('email',          $userData[4]);
 			$templateMgr->assign('academic_title', $userData[5]);
 			$templateMgr->assign('affiliation',    $userData[6]);
-			$templateMgr->assign('biostatement',   $userData[7]);
+			//$templateMgr->assign('biostatement',   $userData[7]);
 			$templateMgr->assign('showEmail',      $showEmail);
 			$templateMgr->assign('bookAchievements', $bookAchievements);
 		}

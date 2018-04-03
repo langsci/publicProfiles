@@ -18,28 +18,28 @@
 
 	<img src="{$baseUrl}/{$publicSiteFilesPath}/{$profileImage.uploadName}?{""|uniqid}" alt="" />
 
-	<h2>{translate key="plugins.generic.publicProfiles.header"} {$academic_title} {$first_name} {$last_name}</h2>
+	<h2>{translate key="plugins.generic.publicProfiles.header"} {$academic_title|strip_unsafe_html} {$first_name|strip_unsafe_html} {$last_name|strip_unsafe_html}</h2>
 
 	{if !$affiliation==""}
 		<h3>{translate key="plugins.generic.publicProfiles.affiliation"}</h3>
-		</p>{$affiliation}</p>
+		</p>{$affiliation|strip_unsafe_html}</p>
 	{/if}
 
 	{if $showEmail}
 		<h3>{translate key="plugins.generic.publicProfiles.email"}</h3>
-		<p><a href="mailto:{$email}">{$email}</a></p>
+		<p><a href="mailto:{$email}">{$email|strip_unsafe_html}</a></p>
 
 	{/if}
 
 	{if !$url==""}
 		<h3>{translate key="plugins.generic.publicProfiles.website"}</h3>
-		<p><a href="{$url}">{$url}</a></p>
+		<p><a href="{$url}">{$url|strip_unsafe_html}</a></p>
 	{/if}
 
 
 	{if !$biostatement==""}
 		<h3>{translate key="plugins.generic.publicProfiles.biostate"}</h3>
-		{$biostatement}
+		{$biostatement|strip_unsafe_html}
 	{/if}
 
 	{$bookAchievements}
